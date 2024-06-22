@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFrontier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            margin-right: 10px;
+        }
+
+        .navbar-toggler {
+            margin: 0 auto;
+        }
+
+        .jumbotron {
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            color: white;
+        }
+
+        #topics .list-group-item {
+            background-color: #f8f9fa;
+            font-size: 1.2rem;
+            border: none;
+            padding: 15px 10px;
+            margin: 5px 0;
+            transition: transform 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        #topics .list-group-item i {
+            margin-right: 10px;
+        }
+
+        #topics .list-group-item:hover {
+            transform: scale(1.05);
+            background-color: #e9ecef;
+        }
+
+        #subscribe {
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .animated {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .animated.visible {
+            opacity: 1;
+        }
+
+        .floating-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            background-color: #25d366;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .floating-icon:hover {
+            transform: scale(1.1);
+        }
+
+        #toTop {
+            display: none;
+            bottom: 80px;
+            right: 20px;
+            font-size: 2rem;
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-laptop-code"></i> DevFrontier
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#topics">Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#subscribe">Subscribe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="jumbotron text-center">
+        <h1 class="display-4 animated">Master Frontend Development</h1>
+        <p class="lead animated">Join our comprehensive class and become a frontend expert from scratch to finish.</p>
+        <a class="btn btn-light btn-lg animated" href="#subscribe" role="button">Subscribe Now</a>
+    </header>
+
+    <section id="topics" class="container my-5">
+        <h2 class="text-center animated">Topics Covered</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item animated"><i class="fab fa-html5"></i> HTML5 & CSS3</li>
+            <li class="list-group-item animated"><i class="fab fa-bootstrap"></i> Responsive Design with Bootstrap</li>
+            <li class="list-group-item animated"><i class="fab fa-js-square"></i> JavaScript Basics and Advanced Concepts</li>
+            <li class="list-group-item animated"><i class="fab fa-git-alt"></i> Version Control with Git</li>
+            <li class="list-group-item animated"><i class="fas fa-tachometer-alt"></i> Web Performance Optimization</li>
+            <li class="list-group-item animated"><i class="fas fa-cloud-upload-alt"></i> Deployment and Hosting</li>
+        </ul>
+    </section>
+
+    <section id="subscribe" class="py-5">
+        <div class="container text-center">
+            <h2 class="animated">Subscribe to Our Class</h2>
+            <p class="animated">Get started with your journey to becoming a frontend developer.</p>
+            <a href="#contact" class="btn btn-primary btn-lg animated">Subscribe Now</a>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5">
+        <h2 class="text-center animated">Contact Us</h2>
+        <div class="text-center">
+            <p class="animated">If you have any questions or need further information, feel free to reach out to us on WhatsApp.</p>
+            <a href="https://wa.me/+2347032845816" class="btn btn-success btn-lg animated">Message Us on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center py-3">
+        <div class="container">
+            <p class="mb-1">Contact us: info@devfrontier.com | +2347032845816</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mt-2">&copy; 2024 DevFrontier . All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a id="toTop" class="floating-icon">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://wa.me/+2347032845816" class="floating-icon" style="bottom: 20px;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.animated');
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 200); // Delay each animation by 200ms
+            });
+        });
+
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Go to top button functionality
+        const toTopButton = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                toTopButton.style.display = 'block';
+            } else {
+                toTopButton.style.display = 'none';
+            }
+        });
+
+        toTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
